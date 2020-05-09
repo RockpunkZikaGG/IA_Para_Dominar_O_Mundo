@@ -1,0 +1,5 @@
+if('afdsfasabcfdsadf'.match('abc')){
+        console.log('true');
+}else{
+        console.log('false');
+}
