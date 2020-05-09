@@ -1,0 +1,1 @@
+git add * && read 'git commit -m ' msg && git commit -m  $msg && git push
