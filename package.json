@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
-    "dev_0.1": "nodemon ./Versao_0.1_Funciona/index.js",
-    "dev_0.2": "nodemon ./Versao_0.2/index.js",
+    "dev_01": "nodemon ./Versao_0.1_Funcionando/index.js",
+    "dev_02": "nodemon ./Versao_0.2_Funcionando/index.js",
     "git": "git add * && git commit -m default_menssage && git push"
   },
   "repository": {
