@@ -4,8 +4,9 @@
   "description": "IA para dominar o mundo",
   "main": "index.js",
   "scripts": {
-    "start": "node ./scripts/index.js",
-    "dev": "nodemon node_modules/.bin/babel-node ./scripts/index.js",
+    "start": "node ./index.js",
+    "dev_0.1": "nodemon ./Versao_0.1_Funciona/index.js",
+    "dev_0.2": "nodemon ./Versao_0.2/index.js",
     "git": "git add * && git commit -m default_menssage && git push"
   },
   "repository": {
