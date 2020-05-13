@@ -17,7 +17,8 @@ module.exports = class Matrix{
     }
     randomize(){
         this.map((ele, i, j) => {
-            return Math.random()*2 - 1;
+            return Math.random();
+            //return Math.floor(Math.random() * 10);
         })
     }
     map(func){
@@ -28,11 +29,19 @@ module.exports = class Matrix{
         });
     }
     static map(A, func){
-        let matrix = new Matrix(A.rows, B.rows);
-        matrix.data = this.data.map((arr, i) => {
+        let matrix = new Matrix(A.rows, A.cols);
+
+        matrix.data = A.data.map((arr, i) => {
             return arr.map((num, j) => {
                 return func(num, i, j);
             })
+        });
+        return matrix;
+    }
+    static transpose(A){
+        var matrix = new Matrix(A.cols, A.rows);
+        matrix.map((num, i, j) => {
+            return A.data[j][i];
         });
         return matrix;
     }
@@ -43,10 +52,38 @@ module.exports = class Matrix{
         })
         return matrix;
     }
+    static matrixToArray(obj){
+        let arr = [];
+        obj.map((elm, i, j) => {
+            arr.push(elm);
+        })
+        return arr;
+    }
+    static hadamard(A, B){
+        var matrix = new Matrix(A.rows, A.cols);
+        matrix.map((num, i, j) => {
+            return A.data[i][j] * B.data[i][j];
+        });
+        return matrix;
+    }
+    static escalar_multiply(A, escalar){
+        var matrix = new Matrix(A.rows, A.cols);
+        matrix.map((num, i, j) => {
+            return A.data[i][j] * escalar;
+        });
+        return matrix;
+    }
     static add(A, B){
         var matrix = new Matrix(A.rows, A.cols);
         matrix.map((num, i, j) => {
             return A.data[i][j] + B.data[i][j];
+        });
+        return matrix;
+    }
+    static subtract(A, B){
+        var matrix = new Matrix(A.rows, A.cols);
+        matrix.map((num, i, j) => {
+            return A.data[i][j] - B.data[i][j];
         });
         return matrix;
     }
