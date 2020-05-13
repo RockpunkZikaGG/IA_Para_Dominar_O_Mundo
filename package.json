@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node ./scripts/index.js",
     "dev": "nodemon node_modules/.bin/babel-node ./scripts/index.js",
-    "git": "git add * && git commit -m default_menssage && git push",
-    "teste_git": "bash git_test"
+    "git": "git add * && git commit -m default_menssage && git push"
   },
   "repository": {
     "type": "git",
